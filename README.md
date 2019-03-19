@@ -1,11 +1,11 @@
 # miniComponents
-some plug-in components for WeChat Mini Program.
+为微信小程序所使用的一些插件：drawBoard（canvas画板）
 
 ## drawBoard
 用于微信小程序的canvas画板插件：通过手势滑动在页面上进行简单绘画，拥有 **撤销** **返撤销** **清空画板** 的功能
 
-调用：自定义组件调用的方式
-`<draw-board></draw-board>`
+调用：自定义插件调用的方式
+`<draw-board width="750rpx" height="900rpx" bindinitEvent="handleBoard"/>`
 
 ##### 插件属性值：
   + **width**: 画板canvas宽度支持rpx、px（鉴于确定导出画板图片的图像大小，不建议只用100%）
