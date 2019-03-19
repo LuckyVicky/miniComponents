@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "draw-board": "plugin://myPlugin/draw-board"
+  }
+}

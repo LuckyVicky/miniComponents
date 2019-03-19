@@ -1,0 +1,6 @@
+{
+  "publicComponents": {
+    "draw-board": "components/drawBoard/drawBoard"
+  },
+  "main": "index.js"
+}
