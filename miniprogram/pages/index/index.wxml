@@ -1,0 +1,8 @@
+<view class="column-canvas">
+  <draw-board width="750rpx" height="750rpx" bindinitEvent="handleBoard"/>
+</view>
+<view class="column-btn">
+  <button class="btn" bindtap="revoke" data-type="back">上一步</button>
+  <button class="btn" bindtap="revoke" data-type="next">下一步</button>
+  <button class="btn" bindtap="clear">清空</button>
+</view>
