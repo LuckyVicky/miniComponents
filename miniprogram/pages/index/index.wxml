@@ -1,6 +1,6 @@
 
 <!-- 画板组件 -->
-<draw-board width="750rpx" height="900rpx" bindinitEvent="handleBoard"/>
+<draw-board width="100%" height="100%" bindinitEvent="handleBoard"/>
 <!-- 画板生成图 -->
 <image src="{{image}}" class="image" mode="aspectFill" wx:if="{{image}}"></image>
 <!-- 按钮操作区域 -->
