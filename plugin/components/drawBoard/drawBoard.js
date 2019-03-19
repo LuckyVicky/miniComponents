@@ -13,10 +13,11 @@ Component({
   data: {
     pathList:[], // 笔划数据列表：二维数组=》面[线[点{}]]
     currentPath: -1, // 当前笔划序号
+    canvasId: 'board'
   },
   ready () {
     // 初始化画板
-    let canvas = wx.createCanvasContext('board', this)
+    let canvas = wx.createCanvasContext(this.data.canvasId, this)
     // 画笔设置粗细、线条交叉样式
     canvas.setLineWidth(3)
     canvas.setLineJoin('round')
@@ -27,7 +28,10 @@ Component({
       "currentPath": this.data.currentPath,
       "revoke": this.revoke,
       "redraw": this.redraw,
-      "clear": this.clear
+      "clear": this.clear,
+      "save": this.save,
+      "canvasId": this.data.canvasId,
+      "componentObject": this
     })
     this.triggerEvent("initEvent")
   },
@@ -152,6 +156,24 @@ Component({
         "canvas": canvas,
         "pathList": [],
         "currentPath": -1
+      })
+    },
+    /**
+     * 导出canvas图像
+     */
+    save () {
+      let { componentObject } = api.getData('drawBoard')
+      return new Promise((reslove, reject) => {
+        wx.canvasToTempFilePath({
+          canvasId: 'board',
+          success: (res) => {
+            let path = res && res.tempFilePath || res.path
+            reslove(path)
+          },
+          fail: _ => {
+            reject(_)
+          }
+        }, componentObject)
       })
     }
   }

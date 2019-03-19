@@ -1,8 +1,12 @@
-<view class="column-canvas">
-  <draw-board width="750rpx" height="750rpx" bindinitEvent="handleBoard"/>
-</view>
+
+<!-- 画板组件 -->
+<draw-board width="750rpx" height="900rpx" bindinitEvent="handleBoard"/>
+<!-- 画板生成图 -->
+<image src="{{image}}" class="image" mode="aspectFill" wx:if="{{image}}"></image>
+<!-- 按钮操作区域 -->
 <view class="column-btn">
   <button class="btn" bindtap="revoke" data-type="back">上一步</button>
   <button class="btn" bindtap="revoke" data-type="next">下一步</button>
   <button class="btn" bindtap="clear">清空</button>
+  <button class="btn" bindtap="save">画完了</button>
 </view>

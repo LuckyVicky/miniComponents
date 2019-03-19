@@ -1,8 +1,6 @@
-.column-canvas {
-  width: 750rpx;
-  height: 750rpx;
-  margin: 0 auto;
-  overflow: hidden;
+.image {
+  border: solid 1rpx #141b77;
+  border-radius: 20rpx;
 }
 .column-btn {
   display: flex;

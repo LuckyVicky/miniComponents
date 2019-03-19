@@ -1,1 +1,1 @@
-<canvas canvas-id="board" style='width: {{width}};height: {{height}};' bindtouchstart="startHandle" bindtouchmove="moveHandle" bindtouchend="endHandle"></canvas>
+<canvas canvas-id="{{canvasId}}" style='width: {{width}};height: {{height}};' bindtouchstart="startHandle" bindtouchmove="moveHandle" bindtouchend="endHandle"></canvas>
